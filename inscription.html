@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>formulairei-inscription</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/Style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+<body >
+      <div class="bg-dark text-white text-fluid text-center">
+            <div class="text-center text-dark bg-primary">
+                <h3>TROCMAVO</h3> 
+            </div>
+        </div>
+        <!-- </div>
+      </p> -->
+        <div class="row ">
+          <div class="col-lg-4 text-white"> 
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active text-primary">
+                        <img src="imag/money.jpg" alt="Los Angeles" width="1100" height="500">
+                        <div class="carousel-caption">
+                        <h3>money</h3>
+                        <h5>sow money!</h5>
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imag/train.jpg" alt="Chicago" width="1100" height="500">
+                        <div class="carousel-caption">
+                        <h3>Chicago</h3>
+                        <p>Thank you, Chicago!</p>
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imag/transport.jpg" alt="New York" width="1100" height="500">
+                        <div class="carousel-caption">
+                        <h3>New York</h3>
+                        <p>We love the Big Apple!</p>
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imag/volkswagen.jpg" alt="New York" width="1100" height="500">
+                        <div class="carousel-caption">
+                        <h3>Town</h3>
+                        <p>help your loved ones remotely!</p>
+                        </div>   
+                    </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 justify-content-center align-items-center">
+                <h2>INSCRIPTION</h2>
+                <form action="http://192.168.2.95:1521/usersite" method="POST" class="was-validated">
+                <!-- <form action="file:///C:/Users/User/Desktop/TrocMoVo/Login-form.html" class="was-validated"> -->
+                    <div class="form-group">
+                        <label for="name">First name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter  first name" name="name" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">lastname:</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Enter last name" name="lastname" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Sexe:</label>
+                        <div class="form-check">
+                            <label class="form-check-label pr-4" for="male">
+                            <input type="radio" class="form-check-input" id="male" name="male" value="M">male
+                            </label>
+                            <label class="form-check-label pr-4 for="woman">
+                                <input type="radio" class="form-check-input" id="Woman" name="woman" value="f">feminine
+                            </label>
+                            <label class="form-check-label pr-4 for="another">
+                                <input type="radio" class="form-check-input" id="another" name="another" value="f">Another
+                            </label>
+                        </div>
+                    </div>   
+                    <div class="form-group pt-4">
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" class="form-control" id="birthday"  placeholder="Enter sexe" name="birthday" required>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                    </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="EnvoyerInfo" onclick="EnvoyerInfo()"> Submit</button>
+                </form>
+        </div>
+
+</body>
+</html>
