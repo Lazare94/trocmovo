@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang=" fr">
+
+<head>
+
+    <title>TROC</title>
+
+    <meta charset="utf-8">
+
+    <meta name="Lazare Tchappi" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/838a35ae71.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="navbar navbar-expand-lg   navbar-dark sticky-top text-center" style="background-color: black;">
+
+        <a href="index.html" class="nav-link"><img src="imag/logo1.jpeg" alt="logo" style="width: 9rem;"></a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around list-unstyled navbar-nav pr-3 pl-3"
+            id="navbarSupportedContent" style="background-color:black;">
+
+            <!-- <ul class="list-unstyled navbar-nav pr-5 pl-5"></ul> -->
+            <li class="nav-item "><a href="#" class="  text-white">ACCUIEL</a></li>
+            <li class="nav-item "><a href="../Reseau/Lab9/Index.html" class="   text-white">TROC-ARGENT</a></li>
+            <li class="nav-item "><a href="#" class="  text-white">TROC_VOYAGE</a></li>
+            <li class="nav-item "><a href="https://www.facebook.com/groups/1575751002694024"
+                    class="  text-white">TERRAINS</a></li>
+            <li class="nav-item "><a href="#" class="  text-white">LOCATION MAISONS</a></li>
+            <li class="nav-item ">
+                <input onclick="Recherche" class="form-control" id="myInput" type="text" placeholder="Search..">
+            </li>
+            <li class="nav-item pr-5 pl-5"><a href="#" class=" text-white"><i class="fas fa-shopping-cart"></i></a>
+            </li>
+            <!-- </ul> -->
+        </div>
+    </div>
+    
+    <div class="col-lg-4 justify-content-center align-items-center">
+        <h2>INSCRIPTION</h2>
+        <form action="http://192.168.2.95:1521/usersite" method="POST" class="was-validated">
+            <!-- <form action="file:///C:/Users/User/Desktop/TrocMoVo/Login-form.html" class="was-validated"> -->
+            <div class="form-group">
+                <label for="name">First name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter  first name" name="name" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <label for="name">lastname:</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Enter last name" name="lastname"
+                    required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Sexe:</label>
+                <div class="form-check">
+                    <label class="form-check-label pr-4" for="male">
+                        <input type="radio" class="form-check-input" id="male" name="male" value="M">male
+                    </label>
+                    <label class="form-check-label pr-4 for=" woman">
+                        <input type="radio" class="form-check-input" id="Woman" name="woman" value="f">feminine
+                    </label>
+                    <label class="form-check-label pr-4 for=" another">
+                        <input type="radio" class="form-check-input" id="another" name="another" value="f">Another
+                    </label>
+                </div>
+            </div>
+            <div class="form-group pt-4">
+                <label for="birthday">Birthday:</label>
+                <input type="date" class="form-control" id="birthday" placeholder="Enter sexe" name="birthday" required>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary" id="EnvoyerInfo" onclick="EnvoyerInfo()"> Submit</button>
+        </form>
+    </div>
+
+    <footer class="nav justify-content-center " style="background-color: black;">
+        <div class="nav m-3">
+          <a href="https://www.google.ca/maps" class="nav-link">
+            <div class="text-center   border-right pad">
+              <i class="fas fa-map-marker-alt text-white"></i>
+              <h6 class="text-white">TROUVER UN MAGASIN</h6>
+            </div>
+          </a>
+          <a href="#" class="nav-link">
+            <div class="text-center text-white  border-right pad">
+              <i class="fas fa-envelope"></i>
+              <h6>CONTACTER NOUS</h6>
+            </div>
+          </a>
+          <a href="#" class="nav-link">
+            <div class="text-center text-white  pad">
+              <i class="fas fa-truck"></i>
+              <h6>SUIVRE UN COLIS</h6>
+            </div>
+          </a>
+        </div>
+        <li class="pt-4">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-square text-white p-2"></i></a>
+          <i class="fab fa-snapchat-square text-white p-2"></i>
+          <a href="https://www.instagram.com/?hl=fr-ca"><i class="fab fa-instagram text-white p-2"></i></a>
+          <i class="fab fa-linkedin text-white p-2"></i>
+          <i class="fab fa-twitter-square text-white p-2"></i>
+          <a href="https://chat.whatsapp.com/J6x65nV0NsKL1slKjZYa7D"><i class="fab fa-whatsapp text-white p-2"></i></a>
+        </li>
+    
+      </footer>
+    <!-- On retrouvera ici les 4 sections principales - en-tête, navigation, contenu et pied de page - ainsi que leurs contenus respectifs. Nous verrons dans les prochains laboratoires comment intégrer ces 4 sections. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
