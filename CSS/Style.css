@@ -1,0 +1,9 @@
+.TR-BarreVerticale-gauche{
+    position: absolute;
+    position: fixed;
+    padding-right: 10%;
+}
+#TR-BarreVerticale-droit{
+    position: relative;
+    margin-left:14%;
+}
